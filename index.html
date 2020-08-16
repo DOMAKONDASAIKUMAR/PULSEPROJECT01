@@ -1,0 +1,331 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+    <script src="https://kit.fontawesome.com/e45fbe995b.js" crossorigin="anonymous"></script>
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: "droid-serif";
+      src: url("./droid-serif.bold-italic.ttf");
+    }
+  
+ 
+  </style>
+  <script type="text/javascript">
+     function validate(){
+      var names=document.getElementById("one");
+      var x =names.value.trim();
+      var regx=names.value;
+        var naam=/[0-9]/;
+      if(x==""||(naam.test(regx))){
+        var s=document.getElementById("n");
+        s.style.visibility="visible";
+        names.classList.add("newclass");
+      return false;
+      }else{
+        var s=document.getElementById("n");
+        s.style.visibility="hidden";
+      names.classList.remove("newclass");
+        
+      }
+      var hi=document.getElementById("two");
+      var hoi =hi.value.trim();
+    var kaam =/[0-9]{1}/;
+    var lom=/\D \d/;
+var top=hi.value;
+      if(hoi==""||!(kaam.test(top))||(lom.test(top))){
+        var s=document.getElementById("a");
+        s.style.visibility="visible";
+        hi.classList.add("newclass");
+      return false;
+      }else{
+        var s=document.getElementById("a");
+        s.style.visibility="hidden";
+      hi.classList.remove("newclass");
+      }
+       var vc=document.getElementById("three");
+      var n=vc.value.trim();
+      var mk=vc.value;
+      var mol=/\W/;
+      if(n==""||(mol.test(mk))){
+        var s=document.getElementById("g");
+        s.style.visibility="visible";
+        vc.classList.add("newclass");
+      return false;
+      }else{
+        var s=document.getElementById("g");
+        s.style.visibility="hidden";
+      vc.classList.remove("newclass");
+      }
+    
+      var zw=document.getElementById("four");
+      var z =zw.value.trim();
+      var df=zw.value;
+      var hex=/[a-z A-Z]/
+      if(z==""||(hex.test(df))){
+        var s=document.getElementById("c");
+        s.style.visibility="visible";
+        zw.classList.add("newclass");
+      return false;
+      }else{
+        var s=document.getElementById("c");
+        s.style.visibility="hidden";
+      zw.classList.remove("newclass");
+        
+      }
+    
+      var ad=document.getElementById("five");
+      var y =ad.value.trim();
+      var fo=ad.value;
+      var num=/^[6-9][0-9]{9}$/
+    if(y==""||!(num.test(fo))){
+        var s=document.getElementById("h");
+        s.style.visibility="visible";
+        ad.classList.add("newclass");
+      return false;
+      }else{
+        var s=document.getElementById("h");
+        s.style.visibility="hidden";
+      ad.classList.remove("newclass");
+        
+      }
+    tabs();
+    return true;
+    }
+    function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+    return true;
+}
+  </script> 
+  </head>
+  <body >
+   
+ <div class="container-fluid pl-0 pr-0" >
+   <nav class="navbar navbar-expand-md ml-4 mr-2 pr-0 ">
+    
+    <a href="" class="navbar-brand prio mr-0"><span class="sai">Priority Pulse</span></a>
+   
+    
+    
+        <div class="menu-btn navbar-toggler pl-0 pr-0" s data-toggle="collapse" data-target="#navbartoggler"><div class="menu-btn__burger "></div></div>
+
+  
+    
+      <div class="collapse navbar-collapse justify-content-end " id="navbartoggler"> <ul class="navbar-nav ">
+        <li class="nav-item  active "><a href="./index.html" class="nav-link kom " >Home</a></li>
+        <li class="nav-item "><a href="./activerides.html" class="nav-link " >Active Rides</a></li>
+        <li class="nav-item "><a href="./profile.html+" class="nav-link ">Profile</a></li>
+        <li class="nav-item "><a href="./logout.html" class="nav-link ">Logout</a></li>
+        <a href="" class="navbar-brand bom" style="padding-left: 25px;" ><img src="./images/Profile.png" class="sign" alt=""></a>
+
+      </ul></div>
+   </nav>
+   </div>
+   <section>
+     <div class="container-fluid ">
+       <div class="row " style="margin-left: 7%;margin-right: 7%;" >
+        <div class="col-md-12 col-lg-7 ambul pl-0 pr-0" >
+          <img src="./images/final (1).png" alt="Ambulance" class="amb ">
+          <p class="texting">An issue that is never ending in our countryis the traffic. <br>
+            The Core Problem With traffic arises when an ambulance tries to cross over. <br>
+            Our Team Priority Pulse is reaching out to this issue with a Priority-based solution.
+
+          </p>
+        </div>
+    
+        <div class="col-md-12 col-lg-5 pr-0 pl-0" >
+          <fieldset class="forms mt-5">
+           <form action=""  name="form"  >
+             <div class="container ">
+               <div class="text-center pt-4">
+                <h1 style="font-weight: 700;">Patient Details</h1>
+                <h5 style="font-weight: 400;">Fill the Details Below</h5>
+               </div>
+               
+              <div class="row">
+              <div class="col-sm-12 boxes ">
+                  <input type="text" class=" inputs" id="one" placeholder="Patient Name" style="padding-left: 5%;" name="patientName" required>
+                  <span id="n" style="visibility: hidden;;color: red;">*Invalid</span>
+                </div>
+                <div class="col-sm-12 boxes "> 
+                  <input type="text" class="inputs" id="two" placeholder="Patient Age" style="padding-left: 5%; " name="PatientAge" maxlength=3 onkeypress='return isNumberKey(event)' required>
+                  <span id="a" style="visibility: hidden;color: red;">*Invalid</span>
+                </div>
+                <div class="col-sm-12 boxes ">
+                  <input type="text" class="inputs" id="three" placeholder="Case"  name="Case"  style="padding-left: 5%;" required>
+                  <span id="g" style="visibility: hidden;color:red;">*Invalid</span>
+                </div>
+                <div class="col-sm-12 boxes ">
+                  <input type="text" class="inputs" id="four" placeholder="Priority Level" name="PriorityLevel" style="padding-left: 5%;" maxlength=1000 onkeypress='return isNumberKey(event)' required>
+                  <span id="c" style="visibility: hidden;color: red;">*Invalid</span>
+                </div>
+                <div class="col-sm-12 boxes ">
+                  <input type="text" class="inputs" id="five" placeholder="Contact" style="padding-left: 5%;" name="Contact" maxlength=10 onkeypress='return isNumberKey(event)' required>
+                  <span id="h"  style="visibility: hidden;color: red;">*Invalid</span>
+                </div>
+                <div class="col-sm-12 boxes text-center">
+                  <button type="button"  onclick="validate()" class="btn fbt" ><strong>Submit</strong></button>
+                <a href="" class="" style="color:black;">Getting in Problem in Submitting?</a>
+                </div>
+                <div class="col-sm-12 boxes text-center track">
+                  <button type="button" class="btn fbt"><strong>Track Patient</strong></button>
+                </div>
+              </div>
+            </div>
+           </form>
+          </fieldset>
+       </div>
+      </div>
+    </div>
+   </section>
+  <div class="container-fluid mt-5 mb-5 pl-0 pr-0">
+    <div style="margin-right: 7%;margin-left: 7%;">
+    <table id="tab" class="table table-responsive-sm table-striped text-center" style="background-color: white;">
+      <thead style="background-color: #F59494;">
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col ">Patient Name</th>
+          <th scope="col">Patient Age</th>
+          <th scope="col">Case</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Priority Level</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Nithish</td>
+          <td >38</td>
+          <td>Accident</td>
+          <td>9182687397</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Kiran</td>
+          <td>20</td>
+          <td>Heart Stroke</td>
+          <td>7032629788</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Sudeep</td>
+          <td>60</td>
+          <td>High BP</td>
+          <td>9505445002</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+ 
+
+
+  <script>
+    var j=4;
+ 
+    function tabs(){
+    var table=document.getElementById("tab");
+    var row=table.insertRow(j);
+    var cell1=row.insertCell(0);
+    var cell2=row.insertCell(1);
+    var cell3=row.insertCell(2);
+    var cell4=row.insertCell(3);
+    var cell5=row.insertCell(4);
+    var cell6=row.insertCell(5);
+    cell1.innerHTML=j;
+    cell2.innerHTML=document.getElementById("one").value;
+    cell3.innerHTML=document.getElementById("two").value;
+    cell4.innerHTML=document.getElementById("three").value;
+    cell6.innerHTML=document.getElementById("four").value;
+    cell5.innerHTML=document.getElementById("five").value;
+    document.getElementById("one").value="";
+    document.getElementById("two").value="";
+    document.getElementById("three").value="";
+    document.getElementById("four").value="";
+    document.getElementById("five").value="";
+  j++;
+ 
+  
+    }
+    const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen) {
+    menuBtn.classList.add('open');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
+})
+   
+  </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap/js/jquery-3.5.1.slim.min.js"  ></script>
+    <script src="bootstrap/js/popper.min.js" ></script>
+    <script src="bootstrap/js/bootstrap.min.js" ></script>
+    <script>
+    /*  $(".navbar-toggler").click(function(){
+         $('.into').toggleClass("navbar-toggler-icon");
+         
+         $('.into').toggleClass("close");
+         $('.into').html("&times;");
+         
+        // alert("navbar-toggler");
+
+      }); */
+   
+      /* var names=document.getElementById("two").value;
+      var x =names.trim();
+     
+      if(x==""){
+        var s=document.getElementById("a");
+        s.style.visibility="visible";
+        document.getElementById("one").style.border="2px solid red";
+      return false;
+    }
+    var names=document.getElementById("three").value;
+      var x =names.trim();
+     
+      if(x==""){
+        var s=document.getElementById("g");
+        s.style.visibility="visible";
+        document.getElementById("one").style.border="2px solid red";
+      return false;}
+      var names=document.getElementById("four").value;
+      var x =names.trim();
+     
+      if(x==""){
+        var s=document.getElementById("c");
+        s.style.visibility="visible";
+        document.getElementById("one").style.border="2px solid red";
+      return false;}
+      var names=document.getElementById("five").value;
+      var x =names.trim();
+     
+      if(x==""){
+        var s=document.getElementById("h");
+        s.style.visibility="visible";
+        document.getElementById("one").style.border="2px solid red";
+      return false;
+
+  } */
+    </script>
+  </body>
+</html>
